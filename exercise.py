@@ -6,6 +6,13 @@ seat = [
 ]
 
 
+def list_empty_seats(seat_array):
+    for num in range(0, len(seat_array)):
+        for num2 in range(0, len(seat_array[num])):
+            if seat_array[num][num2] is None:
+                print("Row {} seat {} is empty.".format(num+1, num2+1))
+
+
 def empty_seats(seat_array):
     for num in range(0, len(seat_array)):
         for num2 in range(0, len(seat_array[num])):
@@ -19,6 +26,6 @@ def empty_seats(seat_array):
                     return ''
 
 
+list_empty_seats(seat)
 empty_seats(seat)
-# empty_seats(seat)
-print(seat)
+list_empty_seats(seat)
